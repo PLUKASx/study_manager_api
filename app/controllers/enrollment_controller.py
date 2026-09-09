@@ -4,7 +4,7 @@ from app.infrastructure.database import get_db
 from app.schemas.schemas import EnrollmentCreate, StandardResponse
 from app.services.enrollment_service import EnrollmentService
 
-router = APIRouter(prefix="/enrollments", tags=["Enrollments"])
+router = APIRouter(prefix="/enrollments", tags=["Matrículas"])
 
 @router.post("", response_model=StandardResponse)
 def create_enrollment(enrollment: EnrollmentCreate, db: Session = Depends(get_db)):
